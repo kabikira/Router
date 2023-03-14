@@ -44,7 +44,7 @@ class SecondViewController: UIViewController {
     
     
     @objc private func tapNextButton(_: UIResponder) {
-        
+        Router.shared.showThird(from: self, countModel: countModel)
     }
     
 }

@@ -10,7 +10,7 @@ import UIKit
 class FirstViewController: UIViewController {
     
     // StoryboardからVCを生成する
-    static func makeFormStoryboard() -> FirstViewController {
+    static func makeFromStoryboard() -> FirstViewController {
         let vc = UIStoryboard(name: "First", bundle: nil).instantiateInitialViewController() as! FirstViewController
         return vc
     }
@@ -20,14 +20,10 @@ class FirstViewController: UIViewController {
         }
     }
     @objc func tapNextButton(_: UIResponder) {
-        
+        Router.shared.showSecond(from: self)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+ 
     
 
 }
